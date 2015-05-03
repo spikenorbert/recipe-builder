@@ -37,14 +37,16 @@ viewsizer, header, stylebox, detailbox, cardbox, viewsizer, {
 	width: 50%;
 	max-width: 1368px;
 	margin: auto;
-	padding: 3%;
+	padding: 10px;
 	border-radius: 10px;
 	border: 1px solid gray;
 	}
 
 #viewsizes img {
 	display: inline-block;
-	margin-left: 30px;
+	margin-left: 15px;
+	margin-right: 15px;
+	height: 50px;
 	}
 
 #header {
@@ -70,6 +72,23 @@ viewsizer, header, stylebox, detailbox, cardbox, viewsizer, {
 	padding: 2%;
 	background-color: white;
 	border-radius: 10px;
+	min-height: 190px;
+	}
+	
+#stylebox .select {
+	width: 100%;
+	}
+	
+#stylebox .pots {
+	float: left;
+	width: 50%;
+	max-width: 300px;
+	}
+	
+#stylebox .floral {
+	float: right;
+	width: 50%;
+	max-width: 3000px;
 	}
 
 #detailbox {
@@ -82,6 +101,7 @@ viewsizer, header, stylebox, detailbox, cardbox, viewsizer, {
 	padding: 2%;
 	background-color: white;
 	border-radius: 10px;
+	min-height: 190px;
 	}
 
 #ingredientbox {
@@ -112,6 +132,7 @@ viewsizer, header, stylebox, detailbox, cardbox, viewsizer, {
 /* recipe card box */
 
 #cardbox {
+	text-align: center;
 	clear: both;
 	width: 90%;
 	max-width: 1520px;
@@ -121,20 +142,108 @@ viewsizer, header, stylebox, detailbox, cardbox, viewsizer, {
 	border-radius: 10px;
 	}
 
+#cardbox img {
+	display: inline-block;
+	}
+
+/*Form elements */
+
+#recipe-form { 
+	box-sizing: border-box; 
+	}
+
+#recipe-form .txtinput {
+  
+  display: block;
+  border-style: solid;
+  border-width: 1px;
+  border-color: #dedede;
+  font-size: 1em;
+  padding: 11px 25px;
+  width: 80%;
+  color: #777;
+   
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1) inset;
+  -moz-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1) inset;
+  -webkit-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1) inset; 
+   
+  transition: border 0.15s linear 0s, box-shadow 0.15s linear 0s, color 0.15s linear 0s;
+  -webkit-transition: border 0.15s linear 0s, box-shadow 0.15s linear 0s, color 0.15s linear 0s;
+  -moz-transition: border 0.15s linear 0s, box-shadow 0.15s linear 0s, color 0.15s linear 0s;
+  -o-transition: border 0.15s linear 0s, box-shadow 0.15s linear 0s, color 0.15s linear 0s;
+}
+
+#recipe-form .txtinput:focus {
+  color: #333;
+  border-color: rgba(41, 92, 161, 0.4);
+   
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1) inset, 0 0 8px rgba(41, 92, 161, 0.6);
+  -moz-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1) inset, 0 0 8px rgba(41, 92, 161, 0.6);
+  -webkit-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1) inset, 0 0 8px rgba(41, 92, 161, 0.6);
+  outline: 0 none; 
+}
+
+#recipe-form .txtarea {
+  display: block;
+  border-style: solid;
+  border-width: 1px;
+  border-color: #dedede;
+  font-size: 1em;
+  padding: 11px 25px;
+  width: 80%;
+  height: 180px;
+  color: #777;
+   
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1) inset;
+  -moz-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1) inset;
+  -webkit-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1) inset; 
+   
+  transition: border 0.15s linear 0s, box-shadow 0.15s linear 0s, color 0.15s linear 0s;
+  -webkit-transition: border 0.15s linear 0s, box-shadow 0.15s linear 0s, color 0.15s linear 0s;
+  -moz-transition: border 0.15s linear 0s, box-shadow 0.15s linear 0s, color 0.15s linear 0s;
+  -o-transition: border 0.15s linear 0s, box-shadow 0.15s linear 0s, color 0.15s linear 0s;
+}
+
+#recipe-form textarea:focus {
+  color: #333;
+  border-color: rgba(41, 92, 161, 0.4);
+ 
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1) inset, 0 0 8px rgba(40, 90, 160, 0.6);
+  -moz-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1) inset, 0 0 8px rgba(40, 90, 160, 0.6);
+  -webkit-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1) inset, 0 0 8px rgba(40, 90, 160, 0.6);
+  outline: 0 none; 
+}
+
+
+span.styleselect {
+  display: block;
+  margin-bottom: 8px;
+}
+ 
+span.styleselect label {
+	font-size: 1.2em;
+  padding-bottom: 4px;
+}
+
 /* Media Queries */
 
 @media screen and (max-width: 768px) {
 
 
-	body { background-image: url(../images/background/pretty-food-ipad.jpg);}
+	body { 
+	background-image: url(../images/background/pretty-food-ipad.jpg);
+	}
+	
+	#viewsizes img {
+	height: 30px;
+	}
+
 }
 	
 	
-@media screen and (max-width: 480px) {
+@media screen and (max-width: 600px) {
 
 
-	body { background-image: url(../images/background/pretty-food-phone.jpg);
-	}
 	
 	h1 {
 	text-align: left;}
@@ -148,6 +257,15 @@ viewsizer, header, stylebox, detailbox, cardbox, viewsizer, {
 	margin: 0 0 10px; 
 	width: 100%;
 	}
+	
+	
+}
+
+@media screen and (max-width: 480px) {
+
+body { background-image: url(../images/background/pretty-food-phone.jpg);
+	}
+
 }
 
 @media screen and (max-width: 240px) {

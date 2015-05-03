@@ -25,34 +25,41 @@
 					<a href="#"><img src="images/viewports/computer.png"></a><a href="#"><img src="images/viewports/tablet.png"></a><a href="#"><img src="images/viewports/iphone.png"></a><a href="#"><img src="images/viewports/3310.png"></a>
 				</div>
 			</div>
-			<form id="card" name="card" method="post" action="recipe-builder.html">
+			<form id="recipe-form" name="recipe-form" method="post" action="recipe-builder.html">
 			<div id="stylebox">
 				<h2>Choose a style</h2>
-				<p><input type="radio" name="style" value="modern"> Modern<input type="radio" name="style" value="modern"> Classic</p>
+					<div class="select">
+					<p><span class="styleselect">
+					<div class="pots"><input type="radio" name="style" value="pots" checked="yes"> <label>Pots and pans </label> <br /><img src="images/cards/pots-small.png"></div>
+					<div class="floral"><input type="radio" name="style" value="flower"> <label> Floral </label><img src="images/cards/floral-small.png"></div>
+					</span></p>
+					</div>
 			</div>
 			<div id="detailbox">
 				<h2>Recipe details</h2>
 				<p>
-				Recipe name: <input type=text size="60" name="recipe" maxlength="100"><br />
-				Your name: <input type=text size="60" name="name" maxlength="100">
+				Recipe name: <input type=text  name="recipe" maxlength="100" class="txtinput"><br />
+				Your name: <input type=text name="name" maxlength="100" class="txtinput">
 				</p>
 				
 			</div>
 			<div id="ingredientbox">
 				<h2>List your ingredients</h2>
 				<p>
-				Ingredients: <textarea  cols="60" rows="10" id="ingredients" name="ingredients"></textarea>
+				Ingredients: <textarea  id="ingredients" name="ingredients" class="txtarea"></textarea>
 				</p>
 			</div>
+			
 			<div id="methodbox">
 				<h2>Show us how</h2>
 				<p>
-				Method: <textarea  cols="60" rows="10" id="method" name="method"></textarea>
+				Method: <textarea id="method" name="method" placeholder="Tell us how it's done..." class="txtarea"></textarea>
 				</p>
 			</div>
 			</form>
 			<div id="cardbox">
 				<h2>Your recipe card</h2>
+				<img src="images/cards/recipe-card-1.png">
 			</div>
 		</div>
 	</body>
