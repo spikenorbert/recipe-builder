@@ -11,6 +11,9 @@
 		<script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
 		<![endif]-->
 		<script type='text/javascript' src='scripts/respond.min.js'></script>
+		<script src="http://code.jquery.com/jquery-1.10.2.js"></script>
+		<script type='text/javascript' src='scripts/cardbuilder.js'></script>
+
 
 	</head>
 	<body>
@@ -19,47 +22,79 @@
 				<h1>Recipe Builder</h1>
 				<p>Choose a look, add your ingredients, write up your method and print the recipe. Boom!</p>
 			</div>
-			<div id="viewsizer">
-				<h1>I'm responsive. Click a device to see the page in each viewport.</h1>
-				<div id="viewsizes">
-					<a href="#"><img src="images/viewports/computer.png"></a><a href="#"><img src="images/viewports/tablet.png"></a><a href="#"><img src="images/viewports/iphone.png"></a><a href="#"><img src="images/viewports/3310.png"></a>
-				</div>
-			</div>
-			<form id="recipe-form" name="recipe-form" method="post" action="recipe-builder.html">
+						<form id="recipe-form" name="recipe-form" method="post" action="recipe-builder.html">
 			<div id="stylebox">
 				<h2>Choose a style</h2>
 					<div class="select">
 					<p><span class="styleselect">
-					<div class="pots"><input type="radio" name="style" value="pots" checked="yes"> <label>Pots and pans </label> <br /><img src="images/cards/pots-small.png"></div>
-					<div class="floral"><input type="radio" name="style" value="flower"> <label> Floral </label><img src="images/cards/floral-small.png"></div>
+					<div class="pots"><input type="radio" id="style" name="style" value="pots" onClick="changeBackground(this.value);"> <label>Pots and pans </label> <br /><img src="images/cards/pots-small.png"></div>
+										<div class="floral"><input type="radio" id="style" name="style" value="floral" onClick="changeBackground(this.value);"> <label> Floral </label><img src="images/cards/floral-small.png"></div>
 					</span></p>
+					<script>
+					function changeBackground(style) {
+    				document.getElementById("cardbox").style.backgroundImage = "url(images/cards/" + bg + ".png)";
+					}
+					</script>
+
 					</div>
 			</div>
 			<div id="detailbox">
 				<h2>Recipe details</h2>
 				<p>
-				Recipe name: <input type=text  name="recipe" maxlength="100" class="txtinput"><br />
-				Your name: <input type=text name="name" maxlength="100" class="txtinput">
+				Recipe name: <input type=text  name="recipe" id="recipe" maxlength="100" class="txtinput" onmouseover="this.value='';document.getElementById('test').innerHTML=''"><br />
+				<script>
+					$("#recipe").keyup(function() {
+					document.getElementById('test').innerHTML=''; $("#test").text($("#recipe").val());
+					});
+				</script>
+				Your name: <input type=text name="name" id="name" maxlength="100" class="txtinput" onmouseover="this.value='';document.getElementById('yourname').innerHTML=''">
+				<script>
+					$("#name").keyup(function() {
+					document.getElementById('yourname').innerHTML=''; $("#yourname").text($("#name").val());
+					});
+				</script>
+
 				</p>
 				
 			</div>
 			<div id="ingredientbox">
 				<h2>List your ingredients</h2>
 				<p>
-				Ingredients: <textarea  id="ingredients" name="ingredients" class="txtarea"></textarea>
+				Ingredients: <textarea  id="ingredientlist" name="ingredientlist" class="txtarea" onmouseover="this.value='';document.getElementById('ingredients').innerHTML=''"></textarea>
+				<script>
+					$("#ingredientlist").keyup(function() {
+					document.getElementById('ingredients').innerHTML=''; $("#ingredients").text($("#ingredientlist").val());
+					});
+				</script>
 				</p>
 			</div>
 			
 			<div id="methodbox">
 				<h2>Show us how</h2>
 				<p>
-				Method: <textarea id="method" name="method" placeholder="Tell us how it's done..." class="txtarea"></textarea>
+				Method: <textarea id="method" name="method" placeholder="Tell us how it's done..." class="txtarea" onmouseover="this.value='';document.getElementById('methodbody').innerHTML=''">></textarea>
+				<script>
+					$("#method").keyup(function() {
+					document.getElementById('methodbody').innerHTML=''; $("#methodbody").text($("#method").val());
+					});
+				</script>
 				</p>
 			</div>
 			</form>
 			<div id="cardbox">
 				<h2>Your recipe card</h2>
-				<img src="images/cards/recipe-card-1.png">
+				<div id="recipebox">
+					<div class="recipename">Recipe name: <span id="test"></span></p></div>
+					<div class="yourname">From the recipe book of: <span id="yourname"></span></p></div>
+					<div id ="ingredientsection">
+						<div class="ingredienthead">Ingredients:</div><br />
+						<div class="ingredientlist"><span id="ingredients"></span></div>
+					</div>
+					<div id ="methodsection">
+						<div class="methodhead">Method:</div><br />
+						<div class="methodtext"><span id="methodbody"></span></div>
+					</div>
+				</div>
 			</div>
 		</div>
 	</body>
