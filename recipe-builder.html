@@ -7,28 +7,50 @@
 		<meta name="keywords" content="food, recipe, printable, foodie, plating, masterchef">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<link href="styles/style.css" type="text/css" rel="stylesheet">	
+		<!--[if lt IE 9]>
+		<script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+		<![endif]-->
+		<script type='text/javascript' src='scripts/respond.min.js'></script>
+
 	</head>
 	<body>
 		<div id="wrapper">
-			<div id="viewsizer">
-				<h1>I'm responsive. Click a device to see the page in each viewport.</h1>
-			</div>
 			<div id="header">
 				<h1>Recipe Builder</h1>
 				<p>Choose a look, add your ingredients, write up your method and print the recipe. Boom!</p>
 			</div>
+			<div id="viewsizer">
+				<h1>I'm responsive. Click a device to see the page in each viewport.</h1>
+				<div id="viewsizes">
+					<a href="#"><img src="images/viewports/computer.png"></a><a href="#"><img src="images/viewports/tablet.png"></a><a href="#"><img src="images/viewports/iphone.png"></a><a href="#"><img src="images/viewports/3310.png"></a>
+				</div>
+			</div>
+			<form id="card" name="card" method="post" action="recipe-builder.html">
 			<div id="stylebox">
 				<h2>Choose a style</h2>
+				<p><input type="radio" name="style" value="modern"> Modern<input type="radio" name="style" value="modern"> Classic</p>
 			</div>
 			<div id="detailbox">
 				<h2>Recipe details</h2>
+				<p>
+				Recipe name: <input type=text size="60" name="recipe" maxlength="100"><br />
+				Your name: <input type=text size="60" name="name" maxlength="100">
+				</p>
+				
 			</div>
 			<div id="ingredientbox">
 				<h2>List your ingredients</h2>
+				<p>
+				Ingredients: <textarea  cols="60" rows="10" id="ingredients" name="ingredients"></textarea>
+				</p>
 			</div>
 			<div id="methodbox">
 				<h2>Show us how</h2>
+				<p>
+				Method: <textarea  cols="60" rows="10" id="method" name="method"></textarea>
+				</p>
 			</div>
+			</form>
 			<div id="cardbox">
 				<h2>Your recipe card</h2>
 			</div>

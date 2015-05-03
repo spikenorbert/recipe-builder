@@ -4,11 +4,12 @@ html { overflow-y: scroll;}
 body { background-image: url(../images/background/pretty-food.jpg); background-position: center center; background-repeat: no-repeat; background-attachment: fixed; background-size: cover; font-size: 13px; color: #666666; font-family: Arial, helvetica, sans-serif;}
 ol, ul { list-style: none; margin: 0;}
 ul li { margin: 0; padding: 0;}
-h1 { text-align: center; margin-bottom: 10px; color: #999;}	
+h1 { text-align: center; margin-bottom: 10px; color: #666;}	
+h2 { color: #666;}	
 a, img { outline: none; border:none; color: #000; font-weight: bold; text-transform: uppercase;}
 p { margin: 0 0 10px; line-height: 1.4em; font-size: 1.2em;}
 img { display: block; margin-bottom: 10px;}
-content, footer, header, hgroup, menu, nav, section { 
+viewsizer, header, stylebox, detailbox, cardbox, viewsizer, { 
     display: block;
 	}
 	
@@ -18,10 +19,10 @@ content, footer, header, hgroup, menu, nav, section {
 	max-width: 1612.8px;
 	margin: auto;
 	padding: 2%;
-	border: 1px solid;
 	} 
 
 #viewsizer {
+	text-align: center;
 	width: 90%;
 	max-width: 1520px;
 	margin: auto;
@@ -29,8 +30,22 @@ content, footer, header, hgroup, menu, nav, section {
 	padding: 2%;
 	background-color: white;
 	border-radius: 10px;
+	
 	}
 
+#viewsizes {
+	width: 50%;
+	max-width: 1368px;
+	margin: auto;
+	padding: 3%;
+	border-radius: 10px;
+	border: 1px solid gray;
+	}
+
+#viewsizes img {
+	display: inline-block;
+	margin-left: 30px;
+	}
 
 #header {
 	width: 90%;
@@ -94,6 +109,8 @@ content, footer, header, hgroup, menu, nav, section {
 	border-radius: 10px;
 	}
 
+/* recipe card box */
+
 #cardbox {
 	clear: both;
 	width: 90%;
@@ -104,3 +121,36 @@ content, footer, header, hgroup, menu, nav, section {
 	border-radius: 10px;
 	}
 
+/* Media Queries */
+
+@media screen and (max-width: 768px) {
+
+
+	body { background-image: url(../images/background/pretty-food-ipad.jpg);}
+}
+	
+	
+@media screen and (max-width: 480px) {
+
+
+	body { background-image: url(../images/background/pretty-food-phone.jpg);
+	}
+	
+	h1 {
+	text-align: left;}
+	
+	#detailbox, #methodbox {
+	float: left;
+	clear: left;
+	}
+	
+	#viewsizer, #header, #detailbox, #methodbox, #stylebox, #ingredientbox, #cardbox {
+	margin: 0 0 10px; 
+	width: 100%;
+	}
+}
+
+@media screen and (max-width: 240px) {
+
+	body { background-image: url(../images/background/bro-u-srs.jpg);}
+}
