@@ -1,14 +1,106 @@
-/* Reset
------------------------------------------------------------- */
+/* Reset */
 * { margin: 0; padding: 0; }
 html { overflow-y: scroll;}
-body { background:#ffffff; font-size: 13px; color: #666666; font-family: Arial, helvetica, sans-serif;}
+body { background-image: url(../images/background/pretty-food.jpg); background-position: center center; background-repeat: no-repeat; background-attachment: fixed; background-size: cover; font-size: 13px; color: #666666; font-family: Arial, helvetica, sans-serif;}
 ol, ul { list-style: none; margin: 0;}
 ul li { margin: 0; padding: 0;}
-h1 { margin-bottom: 10px; color: #111111;}	
+h1 { text-align: center; margin-bottom: 10px; color: #999;}	
 a, img { outline: none; border:none; color: #000; font-weight: bold; text-transform: uppercase;}
 p { margin: 0 0 10px; line-height: 1.4em; font-size: 1.2em;}
 img { display: block; margin-bottom: 10px;}
 content, footer, header, hgroup, menu, nav, section { 
     display: block;
 	}
+	
+/* Structure */
+#wrapper {
+	width: 96%;	
+	max-width: 1612.8px;
+	margin: auto;
+	padding: 2%;
+	border: 1px solid;
+	} 
+
+#viewsizer {
+	width: 90%;
+	max-width: 1520px;
+	margin: auto;
+	margin-top: 20px;
+	padding: 2%;
+	background-color: white;
+	border-radius: 10px;
+	}
+
+
+#header {
+	width: 90%;
+	max-width: 1520px;
+	margin: auto;
+	margin-top: 20px;
+	padding: 2%;
+	background-color: white;
+	border-radius: 10px;
+	}
+
+
+/* 4 boxes */
+
+#stylebox {
+	float: left;
+	width: 42%;
+	max-width: 720px;
+	margin: auto;
+	margin-top: 20px;
+	margin-left: 3%;
+	padding: 2%;
+	background-color: white;
+	border-radius: 10px;
+	}
+
+#detailbox {
+	float: right;
+	width: 42%;
+	max-width: 720px;
+	margin: auto;
+	margin-top: 20px;
+	margin-right: 3%;
+	padding: 2%;
+	background-color: white;
+	border-radius: 10px;
+	}
+
+#ingredientbox {
+	float: left;
+	width: 42%;
+	max-width: 720px;
+	margin: auto;
+	margin-top: 20px;
+	margin-left: 3%;
+	padding: 2%;
+	background-color: white;
+	border-radius: 10px;
+	}
+
+#methodbox {
+	float: right;
+	width: 42%;
+	max-width: 720px;
+	margin: auto;
+	margin-top: 20px;
+	margin-bottom: 20px;
+	margin-right: 3%;
+	padding: 2%;
+	background-color: white;
+	border-radius: 10px;
+	}
+
+#cardbox {
+	clear: both;
+	width: 90%;
+	max-width: 1520px;
+	margin: auto;
+	padding: 2%;
+	background-color: white;
+	border-radius: 10px;
+	}
+
